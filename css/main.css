@@ -1,0 +1,324 @@
+/*
+	Swahili Beach
+
+	Developer	: richardanjer@gmail.com
+  - A squaddigital Project
+	Version		: 1.0
+
+
+*/
+
+/*fonts*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700);
+@font-face {
+  font-family: 'dinproblack';
+  src: url("../fonts/dinpro-black-webfont.eot");
+  src: url("../fonts/dinpro-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/dinpro-black-webfont.woff") format("woff"), url("../fonts/dinpro-black-webfont.ttf") format("truetype"), url("../fonts/dinpro-black-webfont.svg#dinproblack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'dinpro-regularregular';
+  src: url("../fonts/dinpro-regular-webfont.eot");
+  src: url("../fonts/dinpro-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/dinpro-regular-webfont.woff") format("woff"), url("../fonts/dinpro-regular-webfont.ttf") format("truetype"), url("../fonts/dinpro-regular-webfont.svg#dinpro-regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'montreal-serialheavyregular';
+  src: url("../fonts/montreal-serial-heavy-regular-webfont.eot");
+  src: url("../fonts/montreal-serial-heavy-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montreal-serial-heavy-regular-webfont.woff") format("woff"), url("../fonts/montreal-serial-heavy-regular-webfont.ttf") format("truetype"), url("../fonts/montreal-serial-heavy-regular-webfont.svg#montreal-serialheavyregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img, a img {
+  vertical-align: top;
+  outline: none;
+  border: none;
+  max-width: 100%;
+}
+
+body {
+  background: #000;
+  margin: 0px;
+  padding: 0px;
+}
+
+.bg {
+	background:#fff;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	position:fixed;
+	background:#000 url('../images/bg.png');
+	background-position: center -64px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+
+}
+
+.translate {
+	-webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
+
+.loading {
+	position:fixed;
+	top:0;
+	left:0;
+	background:#fff url('../images/loading.gif')no-repeat center center;
+	width:100%;
+	height:100%;
+	z-index:1000;
+}
+
+.package-selector {
+	width:100%;
+	height:50px;
+	z-index: 100;
+	position: relative;
+	top:0;
+}
+
+ul.selectors {
+	padding;0;
+	margin:0 auto;
+	max-width:353px;
+	list-style:none;
+	background:url('../images/transparent.png') repeat;
+	height:48px;
+	border-bottom:4px solid #fff;
+}
+
+ul.selectors  li{
+	float:left;
+	/* text-align:center; */
+	padding-top: 13px;
+	padding-right: 12px;
+}
+ul.selectors  li a{
+	color:#FFF;
+	display:inline-block;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:bold;
+	letter-spacing: 0px;
+}
+
+.package-info {
+	width:100%;
+	float:left;
+	position: relative;
+	/* display: inline-block; */
+}
+
+.info-glove {
+	margin:127px auto;
+	width:577px;
+	border: 4px solid #FFF;
+	padding:16px;
+	/* display: inline-block; */
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+}
+
+.info-container {
+	background:#fff2c0;
+	/* margin-top: -20px; */
+	padding: 16px;
+	text-align: center;
+	position: absolute;
+	top: 15px;
+	z-index: 10;
+	width: 100%;
+	max-width: 545px;
+	display: block;
+}
+
+.info-container  ul {
+	list-style:none;
+}
+
+.info-container  h1{
+	text-transform:uppercase;
+	font-weight:bold;
+	letter-spacing: 9px;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+}
+.info-container p {
+	margin:0;
+	padding:0;
+	font-style: italic;
+	margin-bottom: 16px;
+	font-family: "Georgia",Times New Roman , Serif
+;
+	font-size: 20px;
+}
+
+.info-container ul li {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:bold;
+	font-size: 14px;
+	margin-bottom: 7px;
+	color:#444141;
+}
+
+span.lined {
+	color:#444141;
+	border:solid 1px #444141;
+	padding: 5px;
+	margin-top: 38px;
+	display: block;
+	max-width: 200px;
+	margin: 0 auto;
+	text-transform: uppercase;
+}
+.applogo {
+	width:100%;
+	float: left;
+	text-align: center;
+	/* position: absolute; */
+}
+.applogo img {
+	margin: -60px auto;
+	/* display: table; */
+	z-index: 300;
+	position: relative;
+}
+span.bold{
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+span.price {
+	font-family: "Georgia",Times New Roman , Serif;
+	font-weight:bold;
+	float:left;
+	text-align:center;
+	width:100%;
+	font-size: 47px;
+	padding-bottom: 16px;
+}
+
+.book-btn {
+	text-align:center;
+}
+
+.book-btn span{
+	background:#5a584f;
+	padding: 20px;
+	margin: 10px auto;
+	display: table;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	max-width: 261px;
+	width: 100%;
+	font-size: 18px;
+}
+
+.footer{
+	float: left;
+	position: fixed;
+	z-index: 300;
+	bottom: 0;
+	background: #FFF;
+	width: 100%;
+	font-style:italics;
+}
+
+.footer-left {
+	float:left;
+	width:49%;
+	text-align:left;
+	font-family: "Georgia",Times New Roman , Serif;
+	padding-left:10px;
+	font-style:italic;
+	font-size:12px;
+}
+
+.footer-right{
+	float:right;
+	width:49%;
+	text-align:left;
+	font-family: "Georgia",Times New Roman , Serif;
+	padding-right:10px;
+	font-style:italic;
+	font-size:12px;
+}
+
+.footer-right ul li{
+	float:right;
+	margin-left: 1px;
+	list-style:none;
+	margin-left: 10px;
+}
+.footer-right ul li:last-child{
+	padding-top: 2px;
+}
+.footer-right ul li a{
+	background:url('../images/social.png') no-repeat;
+}
+a.facebook {
+	width: 25px;
+	height: 22px;
+	display: inline-block;
+	background-position:10% 0%;
+}
+
+a.twitter{
+	width: 25px;
+	height: 20px;
+	display: inline-block;
+	background-position:10% 0%;
+}
+#form {
+	display:none;
+}
+.form-element {
+	font-size: 25px;
+	line-height: 53px;
+	color:#797256;
+	width: 100%;
+	margin-bottom: 47px;
+	float: left;
+}
+input.input {
+	border:0;
+	font-size: 25px;
+	color: #000000;
+	border-bottom:solid 2px #797256;
+	outline: none;
+	background: transparent;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	width: auto;
+}
+
+#sevennights {
+	display:none;
+}
+
+.lines {
+margin: 10px auto;
+}
+
+#dorm{
+	display:none;
+}
